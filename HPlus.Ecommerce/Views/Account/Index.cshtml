@@ -1,0 +1,15 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model HPlus.Ecommerce.Data.Entities.Customer
+
+<h2>My Account</h2>
+
+<p>
+    @Model.Address1<br />
+   @* @if (!string.IsNullOrWhiteSpace(@Model.Address2))
+    {
+        @Model.Address2<br />
+    }*@
+    @Model.City, @Model.State @Model.ZIPCode<br />
+</p>

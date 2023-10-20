@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <div class="jumbotron-content">
+        <h1>H+ Sport</h1>
+        <p class="lead">We’re committed to creating products that defy convention, and inspire our customers with pride and trust. In fact, we guarantee every product we sell. If you’re not 100 percent happy with your purchase, you can return it during the first 60 days, no questions asked.</p>
+        <p><a href="@Url.Action("Index", "Product")" class="btn btn-primary btn-lg">Our Products &raquo;</a></p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Unit Testing</h2>
+        <p>
+            Just use Add -> New Project
+
+            Either add a simple Class Library, and manually add a reference to the unit test framework of your choice, or use the "Unit test project" template that comes with visual studio (for use with MSTest)
+        </p>
+        <p><a class="btn btn-default" href="https://stackoverflow.com/questions/2256932/mvc-net-how-to-add-unit-test-project-in-for-existing-source-code">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Database Connection</h2>
+        <p>From Left Panel, go to "Server Explorer>Data Connection> Properties"</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Entity Framework</h2>
+        <p>In order to install this library follow these steps in your Visual Studio IDE. Go to Tools>Package Manager Console>Package Manager Console. When the console opens up, type "Install-Package EntityFramework" and hit enter key. This will install Entity Framework Nuget Package to your IDE. Then you can use this library by adding a using reference.</p>
+        <p><a class="btn btn-default" href="https://stackoverflow.com/questions/23031843/entityframeworks-dll-file-missing">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+@section scripts {
+    <h3>Course: ASP.NET MVC 5 Essential Training</h3>
+}

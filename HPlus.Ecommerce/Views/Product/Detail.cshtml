@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@*<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />*@
+
+<div class="container">
+    <h3 class="h3">Our Products</h3>
+    <div class="row">
+        <div class="col-md-offset-4 col-md-4">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img src="~/Content/Images/Products/1.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">Sale</span>
+                    <span class="product-discount-label">20%</span>
+                </div>
+                <ul class="rating">
+                    @for (var i = 1; i <= ViewBag.Product.StarRating; i++)
+                    {
+                        <li class="fa fa-star"></li>
+                    }
+                    @for (var i = ViewBag.Product.StarRating; i < 5; i++)
+                    {
+                        <li class="fa fa-star disable"></li>
+                    }
+                </ul>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">@ViewBag.Product.Name</a></h3>
+                    <div class="price">
+                        @ViewBag.Product.CurrentPrice
+                        <span>@ViewBag.Product.FullPrice</span>
+                    </div>
+                    <a class="add-to-cart" href="">+ Add To Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

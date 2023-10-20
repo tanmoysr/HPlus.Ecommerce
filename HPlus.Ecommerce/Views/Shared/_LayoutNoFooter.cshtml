@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+@helper IconBars(int count)
+{
+    for (int i = 0; i < count; i++)
+    {
+        <span class="icon-bar"></span>
+    }
+}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - A Demo Project By Tanmoy Chowdhury</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    @*Adding link to the images*@
+    <link rel="icon" href="~/Content/images/icons/32x32.png" sizes="32x32">
+    <link rel="icon" href="~/Content/images/icons/192x192.png" sizes="192x192">
+
+</head>
+<body>
+    <!--<div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">-->
+    @*<span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>*@
+    <!--@IconBars(3)--> @*Generating three bars in mobile view*@
+    <!--</button>
+    <a href='@Url.Action("Index", "Home")' class="navbar-brand">
+        <div class="hplus-logo"></div>
+    </a>-->
+    @*@Url.Action is a HTML helper method*@
+    @*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+    <!--</div>
+            <div class="navbar-collapse collapse ">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Our Products", "Index", "Product")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href='@Url.Action("Index", "Cart")'><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>-->
+    @Html.Partial("~/Views/Shared/_NavBar.cshtml")
+    <div class="container body-content">
+        @RenderBody() @*tell a layout view where to inject the contents of the specific View that's beign displayed.*@
+        <hr />
+        @*<footer>
+                <p>&copy; @DateTime.Now.Year - Tanmoy Chowdhury</p>
+            </footer>*@
+        @*<footer>
+                <p>@Html.Copyright()</p>
+            </footer>*@
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
